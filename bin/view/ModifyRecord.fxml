@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.controller.ModifyRecordController">
+   <children>
+      <Label layoutX="197.0" layoutY="39.0" text="Modify A Record" textFill="RED">
+         <font>
+            <Font name="System Bold" size="26.0" />
+         </font>
+      </Label>
+      <Label layoutX="165.0" layoutY="89.0" text="Student ID" />
+      <Label layoutX="169.0" layoutY="123.0" text="Semester" />
+      <Label layoutX="182.0" layoutY="158.0" text="Year" />
+      <Label layoutX="171.0" layoutY="192.0" text="Subject 1" />
+      <TextField fx:id="tfId" layoutX="238.0" layoutY="85.0" />
+      <ComboBox fx:id="cbSemester" layoutX="238.0" layoutY="119.0" prefWidth="150.0" />
+      <ComboBox fx:id="cbYear" layoutX="238.0" layoutY="154.0" prefWidth="150.0" />
+      <ComboBox fx:id="cbSubjects1" layoutX="238.0" layoutY="188.0" prefWidth="150.0" />
+      <Button layoutX="240.0" layoutY="333.0" mnemonicParsing="false" onAction="#submitRecord" text="Submit New Record" />
+      <Button layoutX="512.0" layoutY="345.0" mnemonicParsing="false" onAction="#backToHomepage" text="Back" />
+      <Button layoutX="69.0" layoutY="333.0" mnemonicParsing="false" onAction="#reset" text="Reset" />
+      <ComboBox fx:id="cbSubjects2" layoutX="238.0" layoutY="223.0" prefWidth="150.0" />
+      <ComboBox fx:id="cbSubjects3" layoutX="238.0" layoutY="257.0" prefWidth="150.0" />
+      <ComboBox fx:id="cbSubjects4" layoutX="238.0" layoutY="292.0" prefWidth="150.0" />
+      <Label layoutX="169.0" layoutY="227.0" text="Subject 2" />
+      <Label layoutX="169.0" layoutY="261.0" text="Subject 3" />
+      <Label layoutX="169.0" layoutY="296.0" text="Subject 4" />
+      <TableView fx:id="tvRecord" layoutY="379.0" prefHeight="200.0" prefWidth="600.0">
+        <columns>
+          <TableColumn fx:id="tcName" prefWidth="75.0" text="StudentName" />
+          <TableColumn fx:id="tcId" prefWidth="75.0" text="StudentId" />
+            <TableColumn fx:id="tcSemester" prefWidth="75.0" text="Semester" />
+            <TableColumn fx:id="tcYear" prefWidth="75.0" text="Year" />
+            <TableColumn fx:id="tcSubjectId1" prefWidth="75.0" text="SubjectId1" />
+            <TableColumn fx:id="tcSubjectId2" prefWidth="75.0" text="SubjectId2" />
+            <TableColumn fx:id="tcSubjectId3" prefWidth="75.0" text="SubjectId3" />
+            <TableColumn fx:id="tcSubjectId4" prefWidth="75.0" text="SubjectId4" />
+        </columns>
+      </TableView>
+      <Button layoutX="418.0" layoutY="85.0" mnemonicParsing="false" onAction="#checkId" text="Check ID" />
+   </children>
+</AnchorPane>
